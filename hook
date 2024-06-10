@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Capture the refs supplied by git on stdin, so as not to confuse our callees.
+REFS=`read`
+
 HAS_NODE=`which node 2> /dev/null || which nodejs 2> /dev/null || which iojs 2> /dev/null`
 
 #
